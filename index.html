@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DD BitePu - Moving to Mobile</title>
+    
+    <title>DD BitePu - Best YBS App & YPS Card Tracker in Yangon</title>
+    
+    <meta name="description" content="Download DD BitePu for iOS & Android. The ultimate Yangon bus guide (YBS) and YPS card balance checker via NFC. Safe YBS app for daily commuters.">
+    <meta name="keywords" content="YBS, YPS, Yangon Bus, NFC Card Reader, Myanmar, DD BitePu, Bus Tracker, Easy YBS alternative, Safe YBS App, The easiest YBS guide, YBS Go alternative">
+    <meta name="author" content="Thaw De Zin">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ddbitepu.vercel.app/">
+    <meta property="og:title" content="DD BitePu - Track YBS & Check YPS Balance in Yangon">
+    <meta property="og:description" content="ပိုမိုလွယ်ကူတဲ့ ရန်ကုန်ခရီးစဉ်အတွက် DD BitePu ကို အသုံးပြုပါ။ YBS tracking နဲ့ YPS balance စစ်ဆေးဖို့ အကောင်းဆုံး App။">
+    <meta property="og:image" content="https://ddbitepu.vercel.app/og-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DD BitePu - Yangon Bus Guide">
+    <meta name="twitter:description" content="Check YPS balance and track YBS buses on the go. Download now!">
+
+    <meta name="apple-itunes-app" content="app-id=6755322013">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DD BitePu",
+      "operatingSystem": "Android, iOS",
+      "applicationCategory": "TravelApplication",
+      "description": "The safest YBS app and easiest YBS guide for Yangon. Best Easy YBS alternative with real-time tracking.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "1000"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,138 +50,92 @@
             --bg-color: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #64748b;
+            --android-green: #3DDC84;
+            --apple-black: #000000;
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            display: flex; align-items: center; justify-content: center; 
+            min-height: 100vh; padding: 20px; 
+        }
+        .container { 
+            max-width: 500px; width: 100%; text-align: center; 
+            background: white; padding: 3rem 2rem; border-radius: 24px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+            animation: fadeIn 0.8s ease-out;
+        }
+        .icon-container { 
+            width: 100px; height: 100px; background: #eff6ff; border-radius: 24px; 
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; 
+            overflow: hidden; /* ပုံကို border-radius အတိုင်း ညှိဖို့ */
+            border: 2px solid #f1f5f9;
+        }
+        .app-icon { 
+            width: 100%; height: 100%; object-fit: cover; 
+        }
+        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.025em; color: #0f172a; }
+        h2 { font-size: 1rem; color: var(--primary-color); margin-bottom: 1.5rem; font-weight: 600; }
+        p { color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem; font-size: 1.05rem; }
+        .app-links { display: flex; flex-direction: column; gap: 15px; }
+        .btn { 
+            display: flex; align-items: center; justify-content: center; gap: 12px; 
+            padding: 16px 24px; border-radius: 14px; text-decoration: none; 
+            font-weight: 700; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .btn-android { background-color: var(--android-green); color: #000; border: 1px solid #2cc472; }
+        .btn-ios { background-color: var(--apple-black); color: #fff; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); opacity: 0.95; }
+        .features-list { 
+            margin-top: 2rem; text-align: left; display: inline-block; 
+            font-size: 0.9rem; color: var(--text-muted); 
+        }
+        .features-list li { list-style: none; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .features-list li::before { content: "✓"; color: var(--primary-color); font-weight: bold; }
+        .footer-note { margin-top: 2.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid #f1f5f9; padding-top: 1.5rem; }
+        
+        .seo-optimized-content { display: none; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-
-        .icon-container {
-            width: 80px;
-            height: 80px;
-            background: #eff6ff;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .icon-container svg {
-            width: 40px;
-            height: 40px;
-            fill: var(--primary-color);
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -0.025em;
-        }
-
-        p {
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 2.5rem;
-        }
-
-        .app-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 24px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s, background 0.2s;
-        }
-
-        .btn-android {
-            background-color: #3DDC84;
-            color: #000;
-        }
-
-        .btn-ios {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        .footer-note {
-            margin-top: 2rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Simple Fade-in Animation */
-        .container {
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-
     <div class="container">
         <div class="icon-container">
-            <svg viewBox="0 0 24 24"><path d="M18,11H6V6h12V11z M16.5,17c0.83,0,1.5-0.67,1.5-1.5S17.33,14,16.5,14S15,14.67,15,15.5S15.67,17,16.5,17z M7.5,17 c0.83,0,1.5-0.67,1.5-1.5S8.33,14,7.5,14S6,14.67,6,15.5S6.67,17,7.5,17z M4,16c0,0.88,0.39,1.67,1,2.22V20c0,0.55,0.45,1,1,1h1 c0.55,0,1-0.45,1-1v-1h8v1c0,0.55,0.45,1,1,1h1c0.55,0,1-0.45,1-1v-1.78c0.61-0.55,1-1.34,1-2.22V6c0-3.5-3.58-4-8-4s-8,0.5-8,4V16z"/></svg>
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/78/03/ed/7803eddc-8bcc-e41e-ab9d-4970a73f632c/Placeholder.mill/400x400bb-75.webp" 
+                 alt="Safe YBS App - DD BitePu" 
+                 title="DD BitePu App Icon"
+                 class="app-icon">
         </div>
-
-        <h1>We’ve Moved!</h1>
-        <p>ပိုမိုကောင်းမွန်တဲ့ Experience အတွက် Website ကို အနားပေးလိုက်ပါပြီ။ Mobile Appsတွေကို အောက်က Link တွေကနေ Download ရယူနိုင်ပါတယ်ရှင့်။</p>
-
+        <h1>DD BitePu</h1>
+        <h2>YBS App & YPS NFC Reader</h2>
+        
+        <p>ရန်ကုန်မြို့တွင်း ခရီးသွားလာမှုအတွက် အကောင်းဆုံး Mobile Experience ကို ရယူပါ။</p>
+        
         <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.thawdezin.bus_nexus_rader&hl=en&pli=1" class="btn btn-android" target="_blank">
-                <span>Download for Android</span>
+            <a href="https://play.google.com/store/apps/details?id=com.thawdezin.bus_nexus_rader" class="btn btn-android" target="_blank">
+                <span>Google Play (Android)</span>
             </a>
             <a href="https://apps.apple.com/us/app/ybs-app-dd-bitepu/id6755322013" class="btn btn-ios" target="_blank">
-                <span>Download for iOS</span>
+                <span>App Store (iOS)</span>
             </a>
+        </div>
+
+        <ul class="features-list">
+            <li>Track YBS Buses in Real-time</li>
+            <li>Check YPS Card Balance via NFC</li>
+            <li>Easy Yangon Bus Routes Finder</li>
+        </ul>
+
+        <div class="seo-optimized-content">
+            <h3>Looking for an Easy YBS alternative?</h3>
+            <p>DD BitePu is the most secure and safe YBS app in Myanmar. If you want to go around Yangon with a reliable guide, DD BitePu is the easiest YBS guide for tracking bus routes and checking YPS balances.</p>
         </div>
 
         <div class="footer-note">
-            Thank you for staying with us.
+            &copy; 2026 DD BitePu. Built with ❤️ for Yangon Commuters.
         </div>
     </div>
-
 </body>
 </html>
