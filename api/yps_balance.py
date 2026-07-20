@@ -1,8 +1,8 @@
 """Protected Vercel proxy for YPS card-balance lookups.
 
-The mobile app must present a valid Firebase App Check token. The upstream SM2
-private key is read only from Vercel's environment and is never returned,
-logged, or bundled into the Android application.
+The mobile app presents a short-lived HMAC proof containing a timestamp, nonce,
+and card number. The upstream SM2 private key is read only from Vercel's
+environment and is never returned, logged, or bundled into the Android app.
 """
 
 from __future__ import annotations
